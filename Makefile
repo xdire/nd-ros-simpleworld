@@ -6,6 +6,7 @@ ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 CMAKE_COMMAND = /opt/homebrew/bin/cmake
 
 build:
+	mkdir build
 	cd build && $(CMAKE_COMMAND) ..
 	cd build && $(MAKE)
 .PHONY: build
